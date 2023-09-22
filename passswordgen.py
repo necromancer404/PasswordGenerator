@@ -1,7 +1,7 @@
 import random 
 import string 
 
-# test comment
+
 def passt(m):
     letters_=string.ascii_letters
     digits_=string.digits
@@ -22,7 +22,15 @@ def passt(m):
     return
 
 
-l=input("How long do you want the password to be? \n 1. 8 Characters long \n 2. 10 Characters long \n 3. 16 Characters long \n")
-passt(l)
+while True:
+    l=int(input("How long do you want the password to be? (Enter a digit between 4-20)\n"))
+    if l>=4 and l<=20:
+        passt(l)
+        break
+    else:
+        print("Please enter a value within the specified range")
+
+        
+
 
 
