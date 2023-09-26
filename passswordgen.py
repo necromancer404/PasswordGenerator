@@ -108,36 +108,58 @@ while True:
                 if c==("yes" or"y"):
                     pass1(l)
                     break
-                else:
+                elif c==("no" or 'n'):
                     pass2(l)
                     break
-            else:
+                else:
+                    print("Invalid input")
+                    exit(0)
+            elif b==("no" or 'n'):
                  d=str.lower(input("Do you want to include special characters?\n"))
                  if d==("yes" or "y"):
                      pass4(l)
                      break
-                 else:
+                 elif d==("no" or "n"):
                      pass3(l)
                      break
-        else:
+                 else:
+                     print("invalid input")
+                     exit(0)
+            else:
+                print("Invalid input")
+        elif a==("no" or "n"):
             b=str.lower(input("Do you want to include numbers?\n"))
             if b==("yes" or "y"):
                   c=str.lower(input("Do you want to include special characters?\n"))
                   if c==("yes" or "y"):
                       pass8(l)
                       break
-                  else:
+                  elif c==("no" or "n"):
                       pass6(l)
                       break
-            else:
+                  else:
+                      print("Invalid input")
+                      exit(0)
+            elif b==("no" or "n"):
                  c=str.lower(input("Do you want to include special characters?\n"))
                  if c==("yes" or "y"):
                      pass4(l)
 
                      break
-                 else:
+                 elif c==("no" or "n"):
                      pass7(l)
                      break
+                 else:
+                     print("Invalid Input")
+                     exit(0)
+            else:
+                print("Invalid input")
+                exit(0)
+        else:
+            print("Invalid input")
+            exit(0)
+
+
     else:
         print("Please enter a value within the specified range")
         exit(0)
